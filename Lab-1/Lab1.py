@@ -8,8 +8,6 @@ from Search import *
 n = (int(input("\nEnter a positive number: ")))
 
 # Variables for logging search time
-linearTime = 0
-binaryTime = 0
 bothTime = 0
 
 array = [0] * n
@@ -21,23 +19,32 @@ for i in range(n):
 array.sort()
 
 # Calculating the timer to find exisitng number
+start = timeit.default_timer()
 for i in range(500):
     temp = random.randint(-1 , n-1)
     key = array[temp]
-    
-    start = timeit.default_timer()
     linearSearch(array, key)
-    end = timeit.default_timer()
-    linearTime += (end - start)
-    
-    start = timeit.default_timer()
     binarySearch(array, key)
-    end = timeit.default_timer()
-    binaryTime += (end - start)
 
-    bothTime += (linearTime + binaryTime)
+end = timeit.default_timer()
 
+bothTime = (end - start)
+
+# Printing out the loop time
+print "\nExisting Search Time"
+print "Average Search Time: %.2f milisecond" %(round((bothTime/500)*1000, 2))
+
+# Calculating the timer to find non-existing number
+key = 5000
+
+linearSearch(array, key)
+start = timeit.default_timer()
+binarySearch(array, key)
+end = timeit.default_timer()
+
+bothTime = (end - start)
+
+print "\n\nNon-Existing Search Time"
 # Printing out all Time for searches
-print "Linear Search Time: %.2f microsecond" %(round((linearTime/500)*100000,2));
-print "Binary Search Time: %.2f microsecond" %(round((binaryTime/500)*100000, 2))
-print "Both Search Time: %.2f microsecond" %(round((bothTime/500)*100000, 2))
+print "One Step Time for n=%.0f : %.2f microsecond" %(n,round((bothTime)*1000000, 2))
+print "Estimate Time for n=10^7 : %.2f second" %(bothTime*10000000)
