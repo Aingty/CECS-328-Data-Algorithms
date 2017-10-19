@@ -31,7 +31,7 @@ end = timeit.default_timer()
 bothTime = (end - start)
 
 # Printing out the loop time
-print "\nExisting Search Time"
+print "\n********************* Part A *********************"
 print "Average Search Time: %.2f milisecond" %(round((bothTime/500)*1000, 2))
 
 # Calculating the timer to find non-existing number
@@ -44,7 +44,7 @@ end = timeit.default_timer()
 
 bothTime = (end - start)
 
-print "\n\nNon-Existing Search Time"
+print "\n\n********************* Part B *********************"
 # Printing out all Time for searches
 print "One Step Time for n=%.0f : %.2f microsecond" %(n,round((bothTime)*1000000, 2))
 print "Estimate Time for n=10^7 : %.2f second" %(bothTime*10000000)
