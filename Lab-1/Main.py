@@ -36,28 +36,33 @@ for i in range(500):
 
 
 
-convertToMicrosecond = 1000000
-convertToMilisecond = 1000
+ToMicrosecond = 1000000
+ToMilisecond = 1000
+ToSecond = 10000000
 # Printing out the loop time
 print "\n********************* Part A *********************"
 print "Average Linear Search Time: %.2f milisecond" %(round((bothLinearTime/500)*1000, 2))
-print "Average Binary Search Time: %.2f microsecond" %(round((bothBinaryTime/500)*convertToMicrosecond, 2))
+print "Average Binary Search Time: %.2f microsecond" %(round((bothBinaryTime/500)*ToMicrosecond, 2))
 
 
 # Calculating the timer to find non-existing number
 key = 5000
 
-
+start = timeit.default_timer()
 linearSearch(array, key)
-
+end = timeit.default_timer()
+linearTime = end - start
 
 start = timeit.default_timer()
 binarySearch(array, key)
 end = timeit.default_timer()
+binaryTime = end - start
 
-bothTime = (end - start)
 
 print "\n\n********************* Part B *********************"
 # Printing out all Time for searches
-print "One Step Time for n=%.0f : %.2f microsecond" %(n,round((bothTime)*convertToMicrosecond, 2))
-print "Estimate Time for n=10^7 : %.2f second\n" %(bothTime*10000000)
+print "Time of Linear Search for n = 10^5 : %.2f microsecond" %(round(linearTime)*ToMicrosecond, 2)
+print "Time of Binary Search for n = 10^5 : %.2f microsecond\n" %(n,round((binaryTime)*ToMicrosecond, 2))
+
+print "Estimate Time of Linear Search for n = 10^7 : %.2f second" %(linearTime*ToSecond)
+print "Estimate Time of Binary Search for n = 10^7 : %.2f second" %(bin)
