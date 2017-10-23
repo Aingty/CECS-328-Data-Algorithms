@@ -61,8 +61,8 @@ binaryTime = end - start
 
 print "\n\n********************* Part B *********************"
 # Printing out all Time for searches
-print "Time of Linear Search for n = 10^5 : %.2f microsecond" %(round(linearTime)*ToMicrosecond, 2)
-print "Time of Binary Search for n = 10^5 : %.2f microsecond\n" %(n,round((binaryTime)*ToMicrosecond, 2))
+print "Time of Linear Search for n = %d : %.2f microsecond" %(n, round((linearTime)*ToMicrosecond, 2))
+print "Time of Binary Search for n = %d : %.2f microsecond\n" %(n, round((binaryTime)*ToMicrosecond, 2))
 
 print "Estimate Time of Linear Search for n = 10^7 : %.2f second" %(linearTime*ToSecond)
-print "Estimate Time of Binary Search for n = 10^7 : %.2f second" %(bin)
+print "Estimate Time of Binary Search for n = 10^7 : %.2f second" %(bininaryTime)

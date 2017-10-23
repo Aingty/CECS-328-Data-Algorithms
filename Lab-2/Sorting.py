@@ -16,10 +16,14 @@ def insertionSort(array):
 def quickSort(array):
     # if statement for base case
     if(len(array) <= 3):
-        tempArray = [0] * len(array)
-        pivot = statistics.median(array)
-        for i in range(len(array)):
-                
+        swap = 0
+        while swap != 0:
+            swap = 0    
+            for i in range(len(array)):
+                if(i+1 < len(array)):
+                    if(array[i] > array[i+1]):
+                        array[i], array[i+1] = array[i+1], array[i]
+                        swap = 1
             
             
     medianList = [array[0], array[len(array)/2], array[len(array)]]
