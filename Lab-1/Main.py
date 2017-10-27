@@ -2,6 +2,7 @@
 
 import random
 import timeit
+import math
 from Search import *
 
 # Prompting user for Array size
@@ -53,16 +54,19 @@ linearSearch(array, key)
 end = timeit.default_timer()
 linearTime = end - start
 
+linearTime = (linearTime/n)
+
 start = timeit.default_timer()
 binarySearch(array, key)
 end = timeit.default_timer()
 binaryTime = end - start
 
+binaryTime = (binaryTime/(math.log(n,2)))
 
 print "\n\n********************* Part B *********************"
 # Printing out all Time for searches
-print "Time of Linear Search for n = %d : %.2f microsecond" %(n, round((linearTime)*ToMicrosecond, 2))
-print "Time of Binary Search for n = %d : %.2f microsecond\n" %(n, round((binaryTime)*ToMicrosecond, 2))
+print "One-Line Time of Linear Search for n = %d : %.2f microsecond" %(n, round((linearTime)*ToMicrosecond, 2))
+print "One-Line Time of Binary Search for n = %d : %.2f microsecond\n" %(n, round((binaryTime)*ToMicrosecond, 2))
 
 print "Estimate Time of Linear Search for n = 10^7 : %.2f second" %(linearTime*ToSecond)
-print "Estimate Time of Binary Search for n = 10^7 : %.2f second" %(bininaryTime)
+print "Estimate Time of Binary Search for n = 10^7 : %f second" %(binaryTime*(math.log(n,2)))
