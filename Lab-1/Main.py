@@ -42,7 +42,7 @@ ToMilisecond = 1000
 ToSecond = 10000000
 # Printing out the loop time
 print "\n********************* Part A *********************"
-print "Average Linear Search Time: %.2f milisecond" %(round((bothLinearTime/500)*1000, 2))
+print "Average Linear Search Time: %.2f milisecond" %(round((bothLinearTime/500)*ToMilisecond, 2))
 print "Average Binary Search Time: %.2f microsecond" %(round((bothBinaryTime/500)*ToMicrosecond, 2))
 
 
@@ -65,8 +65,8 @@ binaryTime = (binaryTime/(math.log(n,2)))
 
 print "\n\n********************* Part B *********************"
 # Printing out all Time for searches
-print "One-Line Time of Linear Search for n = %d : %.2f microsecond" %(n, round((linearTime)*ToMicrosecond, 2))
+print "One-Line Time of Linear Search for n = %d : %.2f milisecond" %(n, round((linearTime)*ToMicrosecond, 2))
 print "One-Line Time of Binary Search for n = %d : %.2f microsecond\n" %(n, round((binaryTime)*ToMicrosecond, 2))
 
 print "Estimate Time of Linear Search for n = 10^7 : %.2f second" %(linearTime*ToSecond)
-print "Estimate Time of Binary Search for n = 10^7 : %f second" %(binaryTime*(math.log(n,2)))
+print "Estimate Time of Binary Search for n = 10^7 : %f second" %(binaryTime*(math.log(ToSecond,2)))
