@@ -18,25 +18,27 @@ for i in range(n):
     array[i] = l
 
 
-array1 = insertionSort(array)
+# array1 = insertionSort(array)
 
-print("\nThe array: %s" %array1)
+# print("\nThe array: %s" %array1)
 
-
-# for i in range(100):
     
-#     start = timeit.default_timer()
-#     array1 = insertionSort(array)
-#     end = timeit.default_timer()
-#     insertionTime = insertionTime + (end - start)
-    
-#     start = timeit.default_timer()
-#     array2 = quickSort(array)
-#     end = timeit.default_timer()
-#     quickTime = quickTime + (end - start)
+# start = timeit.default_timer()
+# array1 = insertionSort(array)
+# end = timeit.default_timer()
+# insertionTime = insertionTime + (end - start)
+
+# start = timeit.default_timer()
+# array2 = quickSort(array)
+# end = timeit.default_timer()
+# quickTime = quickTime + (end - start)
 
 # insertionTime = insertionTime/100
 # quickTime = quickTime/100
+
+array2 = quickSort(array)
+
+print("\n %s" %array)
 
 # print ("\nAverage Insertion Sort Time: %f \n" %insertionTime)
 # print ("Average Quick Sort Time: %f \n" %quickTime)
