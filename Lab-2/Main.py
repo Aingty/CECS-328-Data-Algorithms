@@ -2,43 +2,24 @@
 
 import random
 import sys
-import timeit
+import platform
 from Sorting import *
-sys.setrecursionlimit(150000)
 
-
+#print(platform.architecture())
 n = int(input("\nPlease enter a positive number: "))
 
-array = [0] * n
-
-insertionTime = 0
-quickTime = 0
+array1 = [0] * n
+array2 = [0] * n
 for i in range(n):
     l = random.randint(-7000 , 7000)
-    array[i] = l
+    array1[i] = l
+    array2[i] = l
 
+insertionSort(array1)
+print ("\nInsertion Sort: %s \n" %array1)
 
-# array1 = insertionSort(array)
+# array2 = quickSort(array2)
+# print("Quick sort: %s \n" %array2)
 
-# print("\nThe array: %s" %array1)
-
-    
-# start = timeit.default_timer()
-# array1 = insertionSort(array)
-# end = timeit.default_timer()
-# insertionTime = insertionTime + (end - start)
-
-# start = timeit.default_timer()
-# array2 = quickSort(array)
-# end = timeit.default_timer()
-# quickTime = quickTime + (end - start)
-
-# insertionTime = insertionTime/100
-# quickTime = quickTime/100
-
-array2 = quickSort(array)
-
-print("\n %s" %array)
-
-# print ("\nAverage Insertion Sort Time: %f \n" %insertionTime)
-# print ("Average Quick Sort Time: %f \n" %quickTime)
+quickSortIterative(array2, 0, len(array2)-1)    
+print ("Quick Sort: %s \n" %array2)

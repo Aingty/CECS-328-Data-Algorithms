@@ -11,8 +11,7 @@ def insertionSort(array):
                 if(array[i] > array[i+1]):
                     array[i], array[i+1] = array[i+1], array[i]
                     swap = 1
-    return array
-
+    return array          
 def quickSort(array):
     # if statement for base case
     if(len(array) <= 3):
@@ -29,5 +28,34 @@ def quickSort(array):
                 right.append(array[i])
         left = quickSort(left)
         right = quickSort(right)
-        return (left + right)        
-            
+        return (left + right) 
+
+def spliter(array, left, right):
+    # Using the first element of the array as the pivot
+    pivot = array[left]
+    first = left + 1
+    last = right
+    while True:
+        while first <= last and array[first] <= pivot:
+            first+=1
+        while last >= first and array[last] >= pivot:
+            last-=1
+        if last <= first:
+            break
+        # Swapping according to pivot
+        array[first], array[last] = array[last], array[first]
+    array[left], array[last] = array[last], array[left]
+    return last
+
+def quickSortIterative(array, left, right):
+    stack = []
+    stack.append((left,right))
+    while stack:
+        position = stack.pop()
+        left = position[0]
+        right = position[1]
+        pivot = spliter(array, left, right)
+        if pivot - 1 > left:
+            stack.append((left, pivot - 1))
+        if pivot + 1 < right:
+            stack.append((pivot + 1, right))
