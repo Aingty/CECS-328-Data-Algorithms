@@ -14,7 +14,7 @@ while keepGoing:
             l = random.randint(-100,100)
             array1[i] = l
             array2[i] = l
-        print("\nGenerated Array: \n%s\n" %array)
+        print("\nGenerated Array: \n%s\n" %array1)
         print("Sorted: \n%s\n" %sorted(array2))
         invalidK = True
         while invalidK:
@@ -28,5 +28,16 @@ while keepGoing:
             else:
                 print("Invalid K-value, please input a number!!")
         print("The %.0fth least element in the array is %s" %(k,findingK(array,k)))
+        invalidDecision = True
+        while invalidDecision:
+            decision = input("\nGo again? Y or N")
+            if decision=='y' or decision=='Y':
+                invalidDecision = False
+                continue
+            elif decision=='n' or decision=='N':
+                invalidDecision = False
+                keepGoing = False
+            else:
+                print("Sorry invalid input!!")
     else:
         print("Incorrect array size value!!!")
