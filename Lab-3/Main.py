@@ -30,7 +30,7 @@ while keepGoing:
         print("The %.0fth least element in the array is %s" %(k,findingK(array1,k)))
         invalidDecision = True
         while invalidDecision:
-            decision = input("\nGo again? Y or N")
+            decision = input("\nGo again? Y or N\n\tYour Choice: ")
             if decision=='y' or decision=='Y':
                 invalidDecision = False
                 continue

@@ -25,4 +25,5 @@ def findingK(array, k):
             k = k - len(left)
             tempArray = right
         else:
+            kNotFound = False
             return pivot
