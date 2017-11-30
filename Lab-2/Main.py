@@ -20,10 +20,10 @@ for i in range(m):
         l = random.randint(-7000 , 7000)
         array1[i] = l
         array2[i] = l
-    start = timeit.default_timer()
-    insertionSort(array1)
-    end = timeit.default_timer()
-    insertionSum+=(end - start)
+    # start = timeit.default_timer()
+    # insertionSort(array1)
+    # end = timeit.default_timer()
+    # insertionSum+=(end - start)
     # Recursive Sorting:
     # array2 = quickSort(array2)
     # print("Quick sort: %s \n" %array2)
