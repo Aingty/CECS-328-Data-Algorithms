@@ -8,11 +8,14 @@ while keepGoing:
     n = input("\nPlease input the array size: ")
     if n.isdigit():
         n = int(n)
-        array = [0] * n
+        array1 = [0] * n
+        array2 = [0] * n
         for i in range(n):
             l = random.randint(-100,100)
-            array[i] = l
-        print("Generated Array: \n%s\n" %array)
+            array1[i] = l
+            array2[i] = l
+        print("\nGenerated Array: \n%s\n" %array)
+        print("Sorted: \n%s\n" %sorted(array2))
         invalidK = True
         while invalidK:
             k = input("Please input a number from 1 to %.0f as k least element: " %n) 
