@@ -21,7 +21,7 @@ for i in range(m):
         l = random.randint(-7000 , 7000)
         array1[i] = l
         array2[i] = l
-    if o = 1:
+    if o == 1:
         start = timeit.default_timer()
         insertionSort(array1)
         end = timeit.default_timer()
