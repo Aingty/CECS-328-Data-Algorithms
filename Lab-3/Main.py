@@ -1,5 +1,7 @@
 
 import random
+from Finding import *
+
 
 keepGoing = True
 while keepGoing:
@@ -22,6 +24,6 @@ while keepGoing:
                     print("Invalid K-value, please input within range!!")
             else:
                 print("Invalid K-value, please input a number!!")
-                    
+        print("The %.0fth least element in the array is %s" %(k,findingK(array,k)))
     else:
         print("Incorrect array size value!!!")

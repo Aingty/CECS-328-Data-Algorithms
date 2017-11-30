@@ -9,6 +9,8 @@ def findingK(array, k):
     while kNotFound:
         pivot = tempArray[0]
         for i in range(len(tempArray)):
+            if i == 0:
+                continue
             if(tempArray[i] < pivot):
                 left.append(tempArray[i])
             else:
@@ -21,3 +23,5 @@ def findingK(array, k):
         elif k > len(left):
             tempArray = right
         else:
+            return pivot
+        
