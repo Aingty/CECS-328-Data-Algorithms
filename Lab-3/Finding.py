@@ -15,7 +15,7 @@ def findingK(array, k):
                 left.append(tempArray[i])
             else:
                 right.append(tempArray[i])
-        print(left+"\n"+right)
+        print(left,right)
         left.append(pivot)
         tempArray = []
         # Check if K-value is left or right
