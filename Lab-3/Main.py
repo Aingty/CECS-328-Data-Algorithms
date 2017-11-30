@@ -27,7 +27,7 @@ while keepGoing:
                     print("Invalid K-value, please input within range!!")
             else:
                 print("Invalid K-value, please input a number!!")
-        print("The %.0fth least element in the array is %s" %(k,findingK(array,k)))
+        print("The %.0fth least element in the array is %s" %(k,findingK(array1,k)))
         invalidDecision = True
         while invalidDecision:
             decision = input("\nGo again? Y or N")
