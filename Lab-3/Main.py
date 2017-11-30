@@ -8,12 +8,14 @@ while keepGoing:
     n = input("\nPlease input the array size: ")
     if n.isdigit():
         n = int(n)
-        array1 = [0] * n
-        array2 = [0] * n
-        for i in range(n):
-            l = random.randint(-100,100)
-            array1[i] = l
-            array2[i] = l
+        array1 = [7,4,5,6]
+        array2 = [7,4,5,6]
+        # array1 = [0] * n
+        # array2 = [0] * n
+        # for i in range(n):
+        #     l = random.randint(-100,100)
+        #     array1[i] = l
+        #     array2[i] = l
         print("\nGenerated Array: \n%s\n" %array1)
         print("Sorted: \n%s\n" %sorted(array2))
         invalidK = True
