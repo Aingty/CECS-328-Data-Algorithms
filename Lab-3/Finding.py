@@ -3,10 +3,10 @@
 def findingK(array, k):
     # First element to be pivot
     tempArray = array
-    left = []
-    right = []
     kNotFound = True
     while kNotFound:
+        left = []
+        right = []
         pivot = tempArray[0]
         for i in range(len(tempArray)):
             if i == 0:
@@ -15,13 +15,12 @@ def findingK(array, k):
                 left.append(tempArray[i])
             else:
                 right.append(tempArray[i])
-        print(left,right)
         left.append(pivot)
         tempArray = []
         # Check if K-value is left or right
-        if k < len(left):
+        if k < len(left) and k != 0:
             tempArray = left
-        elif k > len(left):
+        elif k > len(left) and k != 0:
             k = k - len(left)
             tempArray = right
         else:
