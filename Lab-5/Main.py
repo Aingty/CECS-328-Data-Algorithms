@@ -19,6 +19,7 @@ while keepGoing:
             l = random.randint(-1000,1000)
             array1[i] = l
 
+        print("Generated Array: \n%s\n" %array1)
 
         # Check to see if user wants to go again
         keepGoing = keepGoingDecision()
