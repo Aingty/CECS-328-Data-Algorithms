@@ -2,9 +2,9 @@
 import random
 import sys
 
-# Import for Window Machines below
+# Add Useful-Functions path for Window Machines below
 sys.path.append('C:/Users/Aingty/Documents/GitHub Repositories/CECS-328-Data-Algorithms/Useful-Functions')
-# Import for Mac Machines below
+# Add Useful-Functions path for Mac Machines below
 sys.path.append('')
 
 from DecisionMaking import *
