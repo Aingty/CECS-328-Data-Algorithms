@@ -1,5 +1,13 @@
 
 import random
+import sys
+
+# Import for Window Machines below
+sys.path.append('C:/Users/Aingty/Documents/GitHub Repositories/CECS-328-Data-Algorithms/Useful-Functions')
+# Import for Mac Machines below
+sys.path.append('')
+
+from DecisionMaking import *
 from Finding import *
 
 
@@ -28,16 +36,8 @@ while keepGoing:
             else:
                 print("Invalid K-value, please input a number!!")
         print("The %.0fth least element in the array is %s" %(k,findingK(array1,k)))
-        invalidDecision = True
-        while invalidDecision:
-            decision = input("\nGo again? Y or N\n\tYour Choice: ")
-            if decision=='y' or decision=='Y':
-                invalidDecision = False
-                continue
-            elif decision=='n' or decision=='N':
-                invalidDecision = False
-                keepGoing = False
-            else:
-                print("Sorry invalid input!!")
+        
+        # Check to see if user wants to go again
+        keepGoing = keepGoingDecision()
     else:
         print("Incorrect array size value!!!")
