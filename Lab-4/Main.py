@@ -1,4 +1,13 @@
 import random
+import sys
+
+# Import for Window Machines below
+sys.path.append('C:/Users/Aingty/Documents/GitHub Repositories/CECS-328-Data-Algorithms/Useful-Functions')
+# Import for Mac Machines below
+sys.path.append('')
+
+
+from DecisionMaking import *
 from MSS import *
 
 keepGoing = True
@@ -12,9 +21,12 @@ while keepGoing:
         for i in range(n):
             l = random.randint(-100,100)
             array1[i] = l
+        print("Generated Array:\n\t%s"%array1)
+        print("\nThe MSS using the fast method is %.0f\n" %fastMSS(array1))
+        
+        # Check to see if user wants to go again
+        keepGoing = keepGoingDecision()
     else:
         print("Incorrect array size value!!")
         continue
 
-    print("Generated Array:\n\t%s"%array1)
-    print("\nThe MSS using the fast method is %.0f\n" %fastMSS(array1))
