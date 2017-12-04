@@ -1,8 +1,15 @@
 #!/usr/bin/env Python
 
 import random
+import sys
 import timeit
 import math
+
+# Add Useful-Functions path for Window Machines below
+sys.path.append('C:/Users/Aingty/Documents/GitHub Repositories/CECS-328-Data-Algorithms/Useful-Functions')
+# Add Useful-Functions path for Mac Machines below
+sys.path.append('/Users/Aingty/Applications/GitHub Repositories/CECS-328-Data-Algorithms/Useful-Functions')
+
 from Search import *
 
 # Prompting user for Array size
@@ -41,9 +48,9 @@ ToMicrosecond = 1000000
 ToMilisecond = 1000
 ToSecond = 10000000
 # Printing out the loop time
-print "\n********************* Part A *********************"
-print "Average Linear Search Time: %.2f milisecond" %(round((bothLinearTime/500)*ToMilisecond, 2))
-print "Average Binary Search Time: %.2f microsecond" %(round((bothBinaryTime/500)*ToMicrosecond, 2))
+print ("\n********************* Part A *********************")
+print ("Average Linear Search Time: %.2f milisecond" %(round((bothLinearTime/500)*ToMilisecond, 2)))
+print ("Average Binary Search Time: %.2f microsecond" %(round((bothBinaryTime/500)*ToMicrosecond, 2)))
 
 
 # Calculating the timer to find non-existing number
@@ -63,10 +70,10 @@ binaryTime = end - start
 
 binaryTime = (binaryTime/(math.log(n,2)))
 
-print "\n\n********************* Part B *********************"
+print ("\n\n********************* Part B *********************")
 # Printing out all Time for searches
-print "One-Line Time of Linear Search for n = %d : %.2f milisecond" %(n, round((linearTime)*ToMicrosecond, 2))
-print "One-Line Time of Binary Search for n = %d : %.2f microsecond\n" %(n, round((binaryTime)*ToMicrosecond, 2))
+print ("One-Line Time of Linear Search for n = %d : %.2f milisecond" %(n, round((linearTime)*ToMicrosecond, 2)))
+print ("One-Line Time of Binary Search for n = %d : %.2f microsecond\n" %(n, round((binaryTime)*ToMicrosecond, 2)))
 
-print "Estimate Time of Linear Search for n = 10^7 : %.2f second" %(linearTime*ToSecond)
-print "Estimate Time of Binary Search for n = 10^7 : %f second" %(binaryTime*(math.log(ToSecond,2)))
+print ("Estimate Time of Linear Search for n = 10^7 : %.2f second" %(linearTime*ToSecond))
+print ("Estimate Time of Binary Search for n = 10^7 : %f second" %(binaryTime*(math.log(ToSecond,2))))

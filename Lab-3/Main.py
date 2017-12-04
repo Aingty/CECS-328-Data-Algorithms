@@ -5,7 +5,7 @@ import sys
 # Add Useful-Functions path for Window Machines below
 sys.path.append('C:/Users/Aingty/Documents/GitHub Repositories/CECS-328-Data-Algorithms/Useful-Functions')
 # Add Useful-Functions path for Mac Machines below
-sys.path.append('')
+sys.path.append('/Users/Aingty/Applications/GitHub Repositories/CECS-328-Data-Algorithms/Useful-Functions')
 
 from DecisionMaking import *
 from Finding import *
