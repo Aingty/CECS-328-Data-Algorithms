@@ -10,4 +10,15 @@ def fastMSS(array):
             temp = 0
     return mss
 
-#def slowMSS(array):
+def slowMSS(array):
+    if len(array) < 2:
+        return fastMSS(array)
+    else:
+        left = []
+        right = []
+        middle = int(len(array)/2)
+        for i in range(middle):
+            left.append(array[i])
+        for i in range(middle, len(array)):
+            right.append(array[i])
+        return max(slowMSS(left), slowMSS(right), fastMSS(left+right))

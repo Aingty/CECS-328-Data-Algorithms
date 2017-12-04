@@ -21,8 +21,9 @@ while keepGoing:
         for i in range(n):
             l = random.randint(-100,100)
             array1[i] = l
-        print("Generated Array:\n\t%s"%array1)
-        print("\nThe MSS using the fast method is %.0f\n" %fastMSS(array1))
+        print("\nGenerated Array:\n\t%s"%array1)
+        print("\nThe MSS using the fast method is %.0f" %fastMSS(array1))
+        print("The MSS using the slow method is %.0f" %slowMSS(array1))
         
         # Check to see if user wants to go again
         keepGoing = keepGoingDecision()
