@@ -53,7 +53,7 @@ while keepGoing:
                 print("Current runtime SelectionSort: %s seconds\n"%avgSelectionSortTime)
                 # Print the sorted array if chosen by user
                 if printing == "y" or printing == "Y":
-                    print("After Selection Sort: \n\t%s\n"%array2)
+                    print("After Selection Sort: \n\t%s\n"%array2[::-1])
             
             # Sorting using quick sort if chosen by user
             if comparison == 2:
