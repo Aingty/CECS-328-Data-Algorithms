@@ -21,14 +21,20 @@ def selectionSort(array):
     """
     Find the lowest values and move it to the last indexes
     """
-    noSwap = True
-    while noSwap:
-        noSwap = False
-        for i in range(len(array)):
-            if(i+1 < len(array)):
-                if(array[i+1] > array[i]):
-                    array[i+1], array[i] = array[i], array[i+1]   
-                    noSwap = True
+    for i in range(len(array)):
+        minimum = i
+        for j in range(i+1, len(array)):
+            if array[j] > array[minimum]:
+                minimum = j
+        array[minimum], array[i] = array[i], array[minimum]
+    # noSwap = True
+    # while noSwap:
+    #     noSwap = False
+    #     for i in range(len(array)):
+    #         if(i+1 < len(array)):
+    #             if(array[i+1] > array[i]):
+    #                 array[i+1], array[i] = array[i], array[i+1]   
+    #                 noSwap = True
     return array
 
 def quickSort(array):
