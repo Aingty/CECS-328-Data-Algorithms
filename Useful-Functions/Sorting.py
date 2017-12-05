@@ -26,7 +26,7 @@ def selectionSort(array):
         noSwap = False
         for i in range(len(array)):
             if(i+1 < len(array)):
-                if(array[i+1] < array[i]):
+                if(array[i+1] > array[i]):
                     array[i+1], array[i] = array[i], array[i+1]   
                     noSwap = True
     return array

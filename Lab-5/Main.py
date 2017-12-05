@@ -36,7 +36,7 @@ while keepGoing:
                 array2[i] = l
             # Print the array if chosen by user
             if printing == "y" or printing == "Y":
-                print("Generated Array: \n\t%s" %array1)
+                print("\nGenerated Array: \n\t%s\n" %array1)
 
             start = timeit.default_timer()
             tempArray = heap_Sort(array1)
@@ -50,7 +50,10 @@ while keepGoing:
                 selectionSort(array2)
                 end = timeit.default_timer()
                 avgSelectionSortTime += (end - start)
-                print("Current runtime SelectionSort: %s seconds"%avgSelectionSortTime)
+                print("Current runtime SelectionSort: %s seconds\n"%avgSelectionSortTime)
+                # Print the sorted array if chosen by user
+                if printing == "y" or printing == "Y":
+                    print("After Selection Sort: \n\t%s\n"%array2)
             
             # Sorting using quick sort if chosen by user
             if comparison == 2:
@@ -58,7 +61,10 @@ while keepGoing:
                 quickSortIterative(array2, 0, len(array2)-1)    
                 end = timeit.default_timer()
                 avgQuickSortTime += (end - start)
-                print("Current runtime QuickSort: %s seconds"%avgQuickSortTime)
+                print("Current runtime QuickSort: %s seconds\n"%avgQuickSortTime)
+                # Print the sorted array if chosen by user
+                if printing == "y" or printing == "Y":
+                    print("After Quick Sort: \n\t%s\n"%array2)
 
 
             # Print the sorted array if chosen by user
