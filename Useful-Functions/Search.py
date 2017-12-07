@@ -1,6 +1,9 @@
 #!/usr/bin/env Python
 
 def linearSearch(array, key):
+    """
+    Function that returns True if *key* exist in *array*. Else return False.
+    """
     n = len(array)
     for i in range(n):
         if key == array[i]:

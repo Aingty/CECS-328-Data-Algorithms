@@ -1,4 +1,4 @@
-from BTS-Node-Class import Node
+from BTS-Node-Class import *
 
 
 class BST(object):
@@ -25,4 +25,36 @@ class BST(object):
         if self.root == null:
             self.root = Node(value)
         else:
-            
+            posFound = False
+            temp = self.root
+            while !posFound:
+                if value <= temp.getValue() and temp.getLeftChild() == null:
+                    temp.setLeftChild(Node(value))
+                    posFound = True
+                elif value > temp.getValue() and temp.getRightChild() == null:
+                    temp.setRightChild(Node(value))
+                    posFound = True
+                elif value <= temp.getLeftChild():
+                    temp = temp.getLeftChild()
+                elif value > temp.getRightChild():
+                    temp = temp.getRightChild()
+    
+    def searchNode(self,key):
+        """
+        Fucntion that returns True if *key* exists in the Binary Tree. Return False otherwise.
+        """
+        if self.root == null:
+            return False
+        else:
+            nodeFound = False
+            temp = self.root
+            while !nodeFound:
+                if key == temp.getValue():
+                    return True
+                elif key < temp.getValue() and temp.getLeftChild() != null:
+                    temp = temp.getLeftChild()
+                elif key > temp.getValue() and temp.getRightChild() != null:
+                    temp = temp.getRightChild()
+                else:
+                    return False
+                    
