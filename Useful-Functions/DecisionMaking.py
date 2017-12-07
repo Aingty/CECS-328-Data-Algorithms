@@ -19,4 +19,3 @@ def pickOption(array, picked):
         return picked
     else:
         return False
-    

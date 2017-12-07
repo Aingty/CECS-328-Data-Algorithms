@@ -27,7 +27,7 @@ class BST(object):
         else:
             posFound = False
             temp = self.root
-            while !posFound:
+            while not posFound:
                 if value <= temp.getValue() and temp.getLeftChild() == null:
                     temp.setLeftChild(Node(value))
                     posFound = True
@@ -48,7 +48,7 @@ class BST(object):
         else:
             nodeFound = False
             temp = self.root
-            while !nodeFound:
+            while not nodeFound:
                 if key == temp.getValue():
                     return True
                 elif key < temp.getValue() and temp.getLeftChild() != null:

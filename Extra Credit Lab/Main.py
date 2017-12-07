@@ -10,25 +10,33 @@ from BSTClass import *
 from DecisionMaking import *
 
 keepingGoing = True
-binaryTree = new BST()
+binaryTree = BST()
 print("Welcome to the Interactive Binary Tree Program!")
+print("Please choose an option")
 while keepingGoing:
     validOptions = [1,2,3,4,5,6]
-    print("Please choose an option")
     print("\t1. Print Tree\n\t2. Print Tree's Height\n\t3. Insert\n\t4. Find\n\t5. Delete\n\t6. Quit")
     choice = input("\t\tYour Choice: ")
-    validOptions = pickOption(validOptions, choice)
-
-    if validOptions == 1:
+    if choice.isdigit():
+        choice = int(choice)
+    else:
+        print ("Invalid Choice!!! Please input a number!")
+        continue
+    choice = pickOption(validOptions, choice)
+    print (choice)
+    if choice == 1:
         pass
-    elif validOptions == 2:
+    elif choice == 2:
         pass
-    elif validOptions == 3:
+    elif choice == 3:
         pass
-    elif validOptions == 4:
+    elif choice == 4:
         pass
-    elif validOptions == 5:
+    elif choice == 5:
         pass
-    elif validOptions == 6:
+    elif choice == 6:
         keepingGoing = False
+    else:
+        print("Invalid Option!! please pick from these options %s"%validOptions)
+        continue
 print("Thank you for using Aingty's Binary Tree Program. Have a Wonderful rest of your day! :)")
