@@ -10,3 +10,13 @@ def keepGoingDecision():
             return False
         else:
             print("Sorry invalid input!!")
+
+def pickOption(array, picked):
+    """
+    Function to return a valid user picked value option if it is within *array*. Else return False.
+    """
+    if picked in array:
+        return picked
+    else:
+        return False
+    

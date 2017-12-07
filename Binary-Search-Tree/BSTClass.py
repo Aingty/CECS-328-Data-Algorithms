@@ -1,4 +1,4 @@
-from BTS-Node-Class import *
+from BTSNodeClass import *
 
 
 class BST(object):
