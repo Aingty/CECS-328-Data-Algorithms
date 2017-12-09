@@ -16,6 +16,7 @@ from Sorting import *
 n = int(input("\nPlease enter an array size: "))
 m = int(input("How many repetition? : "))
 o = int(input("1. Insertion Sort\n2. Quick Sort\n\tYour Choice: "))
+p = input("Print array? Y or y: ")
 array1 = [0] * n
 array2 = [0] * n
 
@@ -41,6 +42,10 @@ for i in range(m):
         quickSum+=(end-start)
 print("Insertion Sort Running Time: %s seconds" %(insertionSum/m))
 print("Quick Sort Running Time: %s seconds" %(quickSum/m))
+print("This PC can run about %.0f Insertion sort per second."%((n*n)/(insertionSum/m)))
 
-# print ("\nInsertion Sort: %s \n" %array1)
-# print ("Quick Sort: %s \n" %array2)
+if p == "Y" or p == "y":
+    if o == 1:
+        print ("\nInsertion Sort: %s \n" %array1)
+    else:
+        print ("Quick Sort: %s \n" %array2)
